@@ -60,11 +60,11 @@ AVS = (0.35 \times CTR_{est}) + (0.40 \times RET_{est}) + (0.25 \times SV_{norm}
 
 ## 4. Production Guidelines
 
-### Video Assembly
-* **Engine:** FFmpeg 7.x / Diffusion Studio CLI
-* **Bitrate:** High-profile H.264, CRF 20–22, preset `veryfast` or `medium`
-* **Color Grading:** Warm atmospheric enhancement (`eq=contrast=1.08:saturation=1.15`)
-* **Audio:** 256 kbps AAC minimum, -14 LUFS target loudness, 2s lead-in fade, 3s outro fade
+### Video Assembly (Diffusion Studio Architecture)
+* **Primary Engine:** **Diffusion Studio** (`diffusionstudio/editor`, 3k+ GitHub stars) via Model Context Protocol (MCP) or CLI (`dapi`).
+* **No Raw Edits:** Agents must not perform fragile manual video manipulations. All tracks, transitions, waveform synchronization, and exports are executed via Diffusion Studio's programmatic JSX timelines.
+* **Color Grading:** Native Diffusion Studio LUTs and contrast enhancement (warm golden hour, atmospheric night glow).
+* **Audio Mastering:** Broadcast-level 256 kbps AAC minimum, -14 LUFS target loudness, micro-crossfades, and beat-matched transitions.
 
 ### Thumbnails
 * Always produce two variants at 1280x720:

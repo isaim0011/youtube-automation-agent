@@ -162,31 +162,61 @@ CDR = \frac{\text{Monthly Search and Browse Velocity}}{\text{Active Competitors 
 
 ---
 
-## 🛠️ 5. End-to-End Production & Automation Pipeline
+## 🛠️ 5. Diffusion Studio Agentic Video Editing Pipeline (No Raw Manual Edits)
 
-Whenever tasked with building, editing, or uploading videos, execute the pipeline systematically inside the active project folder:
+All video compositions, timeline arrangements, and renders are handled through **Diffusion Studio** ([`diffusionstudio/editor`](https://github.com/diffusionstudio/editor)) — the open-source video editor engineered specifically for AI coding agents.
+
+### A. Core Architecture: Agent ↔ Diffusion Studio via MCP & CLI
+Instead of writing raw, fragile manual scripts, the agent interfaces with Diffusion Studio via its native **Model Context Protocol (MCP)** server and CLI:
 
 ```
-[Google Flow / Veo Automation Assets in raw_assets/] 
+[Google Flow / Veo Raw Footage in raw_assets/] 
        │
        ▼
-[1. Structural Audit] ──► Validate WAV audio bitrates (min 24-bit/48kHz or 256k AAC)
-       │                  Validate MP4 video streams (1080p+, progressive scan)
+[1. Structural Audit & Media Inspection] 
+       │  • Analyze audio waveforms & speech: `dapi media waveform / listen`
+       │  • Inspect visual keyframes & filmstrips: `dapi media grab / filmstrip`
        ▼
-[2. Automated Assembler] ──► Concatenate tracks with micro-crossfades & unique track names
-       │                     Sequence complementary video clips (multi-shot cycles)
-       │                     Apply color-grading filters (contrast, warm saturation)
+[2. Diffusion Studio Timeline Composition (JSX)] 
+       │  • Programmatic multi-track timeline composition
+       │  • Beat-synchronized cuts & frequency-responsive transitions
+       │  • Non-destructive color grading (warm sunset & golden-hour LUTs)
        ▼
-[3. High-CTR Thumbnails] ──► Generate 1280x720 (16:9) in project/thumbnails/
-       │                     Version A: Clean photographic immersion (Bilibili/alt)
-       │                     Version B: Contrast badge + font hierarchy (YouTube primary)
+[3. Real-Time Verification via MCP Engine] 
+       │  • Validate composition integrity: `diffusion check <id>`
+       │  • Render preview frame captures: `diffusion capture <id>`
        ▼
-[4. SEO & Metadata Engine] ──► Generate project/video_metadata.json
-       │                       Calculate precise timestamp chapters with unique titles
-       │                       Inject brand identity & primary search hashtags
+[4. Final Render & High-Fidelity Export] 
+       │  • Hardware-accelerated WebCodecs/FFmpeg engine: `diffusion export <id>`
+       │  • Output rendered Full HD 1080p master to `projects/<ID>/output/`
        ▼
-[5. API Uploader Pipeline] ──► Execute uploader from channel/uploader/
+[5. High-CTR Thumbnails & SEO Engine] 
+       │  • Generate dual-variant 1280x720 thumbnails
+       │  • Reverse-engineer top-performing competitor tags & chapter timestamps
+       ▼
+[6. Zero-Touch Headless API Deployment] 
+          • Execute `youtubeuploader.exe -cache request.token`
 ```
+
+### B. Diffusion Studio MCP Server Configuration
+To allow agents (Antigravity, Claude Code, Cursor) to edit videos live over MCP, mount the Diffusion Studio server:
+```json
+{
+  "mcpServers": {
+    "diffusion-studio": {
+      "command": "node",
+      "args": ["<PATH_TO_DIFFUSION_STUDIO>/apps/cli/dist/index.js", "mcp"]
+    }
+  }
+}
+```
+Available MCP Tools:
+* `open`: Launches Diffusion Studio and mounts the project directory.
+* `context`: Returns current timeline state, audio tracks, and clip IDs.
+* `capture`: Grabs exact time-coded preview frames for visual verification.
+* `check`: Runs automated linting on audio/video sync and clipping issues.
+* `export`: Renders the finalized timeline to an `.mp4` file.
+* `mediaProbe` & `mediaWaveform`: Analyzes raw beats, frequency spectrum, and audio transients.
 
 ---
 
