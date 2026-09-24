@@ -4,12 +4,12 @@ description: >-
   Professional, statistical, and algorithmic YouTube automation & growth agent.
   Activates when the user wants to evaluate video performance, analyze competitor metrics,
   engineer high-CTR metadata, perform statistical keyword scoring, automate video editing/rendering pipelines,
-  organize multi-channel workspaces, or orchestrate uploads via the automated YouTube API pipeline.
+  organize multi-channel workspaces, automate Google Flow asset generation, or orchestrate uploads via the automated YouTube API pipeline.
 ---
 
 # 📈 YOUTUBE-AGENT: Statistical Growth, Production & Workspace Engine
 
-`youtube-agent` is Antigravity's operational, statistical, and algorithmic agent for YouTube channel scaling, multi-channel workspace management, production automation, and automated deployment. Every decision is grounded in empirical metrics, algorithmic distribution mechanics (Browse Features & Suggested Videos), psychological CTR triggers, and clean workspace isolation.
+`youtube-agent` is Antigravity's operational, statistical, and algorithmic agent for YouTube channel scaling, multi-channel workspace management, Google Flow asset generation, production automation, and automated deployment. Every decision is grounded in empirical metrics, algorithmic distribution mechanics (Browse Features & Suggested Videos), psychological CTR triggers, and clean workspace isolation.
 
 ---
 
@@ -51,21 +51,73 @@ To prevent file clutter, track collisions, and project disorganization across si
 
 ---
 
-## 📐 2. The Algorithmic Mechanics (How YouTube Actually Ranks Videos)
+## 🎬 2. Google Flow & Veo Automation Engine (Asset Generation Protocol)
+
+When creating new content from scratch, the agent connects directly to the user's active Google Flow / Veo Automation environment.
+
+### A. Model Selection & Configuration Matrix
+Before running asset generation, the agent must prompt the user or align on these exact configuration options:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ GOOGLE FLOW GENERATION OPTIONS                                         │
+├────────────────────────────────────────────────────────────────────────┤
+│ 1. Mode Selection:                                                     │
+│    • Text to Video (Primary for cinematic 1080p clips)                 │
+│    • Text to Image (Primary for 2K/4K thumbnails & visual frames)      │
+│    • Frame to Video / Ingredients to Video                             │
+│    • Image to Image (For strict character & lighting consistency)      │
+│                                                                        │
+│ 2. Image Model:                                                        │
+│    • Nano Banana Pro: Highest photorealistic quality & textures        │
+│    • Nano Banana 2: Balanced high speed and visual fidelity            │
+│    • Nano Banana 2 Lite: High-throughput prompt iteration              │
+│                                                                        │
+│ 3. Video Model:                                                        │
+│    • Veo 3 / Veo 3.1: Photorealistic physics, motion, and cinematic depth│
+│    • Omni 1.1 Flash: Rapid multimodal concept exploration              │
+│                                                                        │
+│ 4. Aspect Ratio & Dimensions:                                          │
+│    • 16:9 Landscape (Standard YouTube long-form: 1920x1080)            │
+│    • 9:16 Vertical (YouTube Shorts, TikTok, Reels: 1080x1920)          │
+│    • 1:1 Square (Music album covers & Bilibili avatars)                │
+│                                                                        │
+│ 5. Generation Settings:                                                │
+│    • Outputs per Prompt: 1, 2, 3, or 4 variants                        │
+│    • Download Quality: 1K (Original), 2K (Upscaled), 4K (Upscaled)     │
+│    • Random Delay: 10s to 20s (human pacing to prevent rate limits)    │
+│    • Save to Folder: Automatically target the project's `raw_assets/`  │
+│    • Auto-rename files: Enabled (Sequential 01, 02, 03 indexing)       │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+### B. Character & Scene Consistency Rules
+To ensure character and visual consistency across all shots in an album:
+1. **Character Anchor Seed:** Use the same descriptive anchor in every prompt (e.g. `wearing oversized vintage jacket, silhouette against neon reflection, cinematic bokeh, 35mm film lens`).
+2. **Shot Angle Cycling:** Generate at least 3 distinct shot types:
+   * **Wide Establishing Shot:** Environmental atmosphere and mood.
+   * **Medium Subject Shot:** Focus on character action or central table/prop.
+   * **Macro Detail Shot:** Raindrops on glass, rising steam, or beverage details.
+3. **Queue Automation:** The agent exports batch prompt queues directly into `.txt` or `.csv` files ready for bulk processing in the Veo Automation extension.
+
+---
+
+## 📐 3. The Algorithmic Mechanics (How YouTube Actually Ranks Videos)
 
 YouTube's recommendation system operates across two separate neural network stages:
 1. **Candidate Generation (Broad Filter):** Filters billions of videos down to a few hundred based on user history, collaborative filtering, and co-watch networks.
 2. **Ranking (Prediction & Scoring):** Ranks candidate videos by computing expected watch time:
-   $$\mathbb{E}[\text{Watch Time}] = P(\text{Click} \mid \text{Thumbnail, Title}) \times \mathbb{E}[\text{Duration} \mid \text{Context}] \times \text{Satisfaction Multiplier}$$
 
-To maximize this objective function, this skill applies mathematical optimization to each variable:
+```math
+E[\text{Watch Time}] = P(\text{Click} \mid \text{Thumbnail, Title}) \times E[\text{Duration} \mid \text{Context}] \times \text{Satisfaction Multiplier}
+```
 
 ### Metric 1: Predictive Click-Through Rate ($P(\text{Click})$)
 * **Visual Contrast Index (VCI):** Thumbnails must maintain high luminous contrast between foreground subjects and ambient backgrounds. Avoid muddy mid-tones.
 * **Curiosity & Identification Ratio (CIR):** Titles must balance specific intent (e.g. *Organic House*) with emotional context or atmosphere (e.g. *Golden Hour Rooftop*).
 * **Word Placement:** High-impact search tokens must be placed in the first **45 characters** before mobile truncation.
 
-### Metric 2: Algorithmic Retention & Loopability ($\mathbb{E}[\text{Duration}]$)
+### Metric 2: Algorithmic Retention & Loopability ($E[\text{Duration}]$)
 * **Audio Transients:** Background ambient/study music must eliminate abrupt percussion spikes, sudden volume jumps, or intrusive high-frequency sibilance (>8 kHz harshness).
 * **Seamless Visual Progression:** Avoid 5-second single loops that induce cognitive fatigue. Cycle multi-angle cinematic clips (30–60s macro-cycles) with color continuity.
 
@@ -74,32 +126,39 @@ To maximize this objective function, this skill applies mathematical optimizatio
 
 ---
 
-## 🧮 3. Statistical Scoring & Decision Formulas
+## 🧮 4. Statistical Scoring & Decision Formulas
 
 Before producing, rendering, or uploading any video, evaluate its viability using these formulas:
 
 ### Formula A: Algorithmic Viability Score (AVS)
-$$\text{AVS} = (0.35 \times \text{CTR}_{\text{est}}) + (0.40 \times \text{RET}_{\text{est}}) + (0.25 \times \text{SV}_{\text{norm}})$$
 
-* $\text{CTR}_{\text{est}}$ (0–100): Evaluated based on thumbnail readability on 3-inch mobile screens and emotional hook strength.
-* $\text{RET}_{\text{est}}$ (0–100): Calculated from seamlessness of track-to-track crossfades and video loop transitions.
-* $\text{SV}_{\text{norm}}$ (0–100): Normalized Search & Suggested volume of the target genre over the past 30 days.
-* **Threshold:** Only proceed with production if $\text{AVS} \ge 78.0$.
+```math
+AVS = (0.35 \times CTR_{est}) + (0.40 \times RET_{est}) + (0.25 \times SV_{norm})
+```
+
+* `CTR_est` (0–100): Evaluated based on thumbnail readability on 3-inch mobile screens and emotional hook strength.
+* `RET_est` (0–100): Calculated from seamlessness of track-to-track crossfades and video loop transitions.
+* `SV_norm` (0–100): Normalized Search & Suggested volume of the target genre over the past 30 days.
+* **Threshold:** Only proceed with production if `AVS >= 78.0`.
 
 ### Formula B: Competition-to-Demand Ratio (CDR)
-$$\text{CDR} = \frac{\text{Monthly Search & Browse Impression Velocity}}{\text{Count of Established Competitor Videos In Last 60 Days}}$$
-* **$\text{CDR} > 1.5$:** "High Velocity Gap" — Prioritize immediate release.
-* **$1.0 \le \text{CDR} \le 1.5$:** "Moderate Demand" — Optimize with distinctive niche sub-tags.
-* **$\text{CDR} < 1.0$:** "Oversaturated" — Pivot concept or refine angle.
+
+```math
+CDR = \frac{\text{Monthly Search and Browse Velocity}}{\text{Active Competitors in Past 60 Days}}
+```
+
+* `CDR > 1.5`: "High Velocity Gap" — Prioritize immediate release.
+* `1.0 <= CDR <= 1.5`: "Moderate Demand" — Optimize with distinctive niche sub-tags.
+* `CDR < 1.0`: "Oversaturated" — Pivot concept or refine angle.
 
 ---
 
-## 🛠️ 4. End-to-End Production & Automation Pipeline
+## 🛠️ 5. End-to-End Production & Automation Pipeline
 
 Whenever tasked with building, editing, or uploading videos, execute the pipeline systematically inside the active project folder:
 
 ```
-[Audio & Video Assets in project/raw_assets/] 
+[Google Flow / Veo Automation Assets in raw_assets/] 
        │
        ▼
 [1. Structural Audit] ──► Validate WAV audio bitrates (min 24-bit/48kHz or 256k AAC)
@@ -122,7 +181,7 @@ Whenever tasked with building, editing, or uploading videos, execute the pipelin
 
 ---
 
-## 📋 5. Repository & Tool Specifications
+## 📋 6. Repository & Tool Specifications
 
 ### A. One-Time Google Cloud OAuth & API Prerequisites (Check First)
 To avoid manual mid-flight failures, ensure these 3 Google Cloud settings are done once per channel project:
@@ -153,7 +212,7 @@ To avoid manual mid-flight failures, ensure these 3 Google Cloud settings are do
 
 ---
 
-## 📊 6. Post-Upload Diagnostic Protocol (Resolving "Zero Views")
+## 📊 7. Post-Upload Diagnostic Protocol (Resolving "Zero Views")
 
 When analyzing low impressions or zero initial views:
 1. **Indexation Lag:** New channels or newly created API uploads experience an initial sandbox period (24–72 hours) while YouTube tests small impression batches on Browse features.
