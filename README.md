@@ -1,29 +1,47 @@
-# YouTube Automation & Autonomous Media Production Engine
+# Universal Autonomous YouTube Production Engine & Multi-Agent Growth Framework
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Platform: Windows / macOS / Linux](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen.svg)]()
-[![Engine: FFmpeg / DiffusionStudio / Go](https://img.shields.io/badge/Stack-FFmpeg%20%7C%20DiffusionStudio%20%7C%20Go-orange.svg)]()
+[![Platform: Cross-Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen.svg)]()
+[![Multi-Agent: Universal](https://img.shields.io/badge/Agents-Antigravity%20%7C%20Claude%20Code%20%7C%20Cursor%20%7C%20Codex%20%7C%20Copilot%20%7C%20Aider-purple.svg)]()
+[![Pipeline: Flow%20Studio%20+%20DiffusionStudio%20+%20YouTube%20API](https://img.shields.io/badge/Stack-Google%20Flow%20%7C%20Veo%20%7C%20DiffusionStudio%20%7C%20Go-orange.svg)]()
 
-> A professional, algorithmic, and statistical YouTube channel automation agent and autonomous media pipeline. Engineered for 24/7 background audio-visual generation with Google Flow, color grading, high-CTR metadata optimization, and zero-touch API deployment.
+> **The Open Universal Standard for Autonomous YouTube Channel Scaling.**  
+> An algorithmic, statistical, and multi-agent system designed for **Antigravity, Claude Code, Cursor, Copilot, Codex, Aider**, and custom LLM agents. Automates the full lifecycle: Google Flow & Veo 3 generation, character/scene consistency, Diffusion Studio agentic timeline editing, high-CTR thumbnail synthesis, and zero-touch headless YouTube API uploads.
+
+---
+
+## 🌟 Universal Multi-Agent Compatibility
+
+This repository is built from the ground up as a **universal agent standard**. It works out of the box with any autonomous coding assistant:
+
+| AI Agent System | Integration Method | Configuration File |
+| :--- | :--- | :--- |
+| **Google Antigravity** | Native Skill Module | `skills/youtube-agent/SKILL.md` |
+| **Claude Code** | Global Agent Instructions / Tool Calling | `AGENT.md` & `CLAUDE.md` |
+| **Cursor & Windsurf** | System Rules & Context Integration | `.cursorrules` & `AGENT.md` |
+| **GitHub Copilot / Workspace** | Instruction Directives | `.github/copilot-instructions.md` |
+| **Aider / Codex / OpenDevin** | Universal System Prompt | `AGENT.md` |
 
 ---
 
 ## 🚀 Key Features
 
-* **🧠 Autonomous `youtube-agent` Skill:** A plug-and-play AI agent specification (`AGENT.md` and `SKILL.md`) that executes empirical CTR scoring (`P(Click)`), retention optimization, and chapter generation.
-* **✨ Google Flow & Veo Automation Suite:** Direct instructions and templates for batch generating photorealistic 1080p video (Veo 3/3.1) and 2K/4K thumbnails (Nano Banana Pro) with automated character/scene consistency.
+* **🧠 Universal `youtube-agent` Skill:** Plug-and-play agent blueprint (`AGENT.md`, `SKILL.md`, `.cursorrules`) that executes mathematical CTR scoring (`P(Click)`), retention loop optimization, and reverse-engineered chapter timestamps.
+* **✨ Google Flow & Veo Automation Suite:** Direct companion automation for batch generating photorealistic 1080p video (Veo 3/3.1) and 2K/4K thumbnails (Nano Banana Pro) with automated character/scene consistency.
+* **🎨 Diffusion Studio Agentic Video Editing:** Replaces fragile manual video manipulations with **Diffusion Studio** (`diffusionstudio/editor`, 3k+ ⭐) via Model Context Protocol (MCP) and programmatic JSX compositions.
 * **🎥 Multi-Angle Video Sequencing Engine:** Intelligent video stitching eliminating repetitive 5-second loop fatigue. Cycles multi-shot cinematic footage with progressive color enhancement (`contrast=1.08:saturation=1.15`) and studio fades.
 * **🎵 Broadcast-Grade Audio Concat:** Lossless WAV-to-256kbps AAC audio mastering, loudness normalization, and micro-crossfade transitions.
 * **🖼️ Dual-Variant High-CTR Thumbnails:** Automated generation of both clean photographic immersion (Bilibili/organic) and contrast-badged text graphics (YouTube mobile feed).
 * **⚡ Headless YouTube API Pipeline:** Integration with `porjo/youtubeuploader` utilizing persistent OAuth tokens and structured JSON schema for zero-touch uploads.
-* **🎨 Diffusion Studio Integration:** Ready-to-use agentic editing hooks with [`diffusionstudio/editor`](https://github.com/diffusionstudio/editor) for JSX compositions and timeline automation.
+* **🗂️ Clean Multi-Channel Isolation:** Enforces clean separation (`channels/<Channel>/projects/<ID>/`) to prevent asset collisions across single or multi-channel networks.
 
 ---
 
 ## 📂 Repository Architecture
 
 ```text
-├── AGENT.md                       # Comprehensive autonomous agent operational manual
+├── AGENT.md                       # Universal multi-agent operational manual (All LLMs)
+├── .cursorrules                   # Cursor, Windsurf & VS Code AI configuration
 ├── skills/
 │   └── youtube-agent/
 │       └── SKILL.md               # Antigravity & Agent skill definition
@@ -52,10 +70,10 @@ To generate video clips and images with consistent characters and prompts:
    * Sign in with your Google account. Ensure you are active in the workspace where you want media created.
 2. **Install the Veo Automation Extension:**
    * Install the official companion extension:  
-     👉 **[Veo Automation: VEO & Nano Banana Google Flow](https://chromewebstore.google.com/detail/veo-automation-veo-nano-b/lnadnaegfljibehcgclljdefggflfpkn)** *(Chrome Web Store extension ID: `lnadnaegfljibehcgclljdefggflfpkn`)*  
+     👉 **[Veo Automation: VEO & Nano Banana Google Flow](https://chromewebstore.google.com/detail/veo-automation-veo-nano-b/lnadnaegfljibehcgclljdefggflfpkn)** *(Chrome Web Store ID: `lnadnaegfljibehcgclljdefggflfpkn`)*  
      *(Official Site: [veoautomation.com](https://veoautomation.com/))*
 3. **Agent Protocol:**
-   * The AI agent will prompt the user to ensure Google Flow is open and logged in.
+   * Any AI agent will prompt the user to confirm their Google Flow login.
    * The agent exports formatted prompt batches and instructs the extension to auto-save directly to `channels/<Channel>/projects/<ID>/raw_assets/`.
 
 ---
