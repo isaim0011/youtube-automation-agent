@@ -10,7 +10,7 @@
 
 ## 🚀 Key Features
 
-* **🧠 Autonomous `youtube-agent` Skill:** A plug-and-play AI agent specification (`AGENT.md` & `SKILL.md`) that executes empirical CTR scoring ($P(\text{Click})$), retention optimization, and chapter generation.
+* **🧠 Autonomous `youtube-agent` Skill:** A plug-and-play AI agent specification (`AGENT.md` and `SKILL.md`) that executes empirical CTR scoring (`P(Click)`), retention optimization, and chapter generation.
 * **🎥 Multi-Angle Video Sequencing Engine:** Intelligent video stitching eliminating repetitive 5-second loop fatigue. Cycles multi-shot cinematic footage with progressive color enhancement (`contrast=1.08:saturation=1.15`) and studio fades.
 * **🎵 Broadcast-Grade Audio Concat:** Lossless WAV-to-256kbps AAC audio mastering, loudness normalization, and micro-crossfade transitions.
 * **🖼️ Dual-Variant High-CTR Thumbnails:** Automated generation of both clean photographic immersion (Bilibili/organic) and contrast-badged text graphics (YouTube mobile feed).
@@ -89,12 +89,20 @@ python scripts/generate_thumbnails.py --input raw_photo.jpg --title "SUNSET LOUN
 The agent enforces mathematical criteria before approving concepts for render:
 
 ### 1. Algorithmic Viability Score (AVS)
-$$\text{AVS} = (0.35 \times \text{CTR}_{\text{est}}) + (0.40 \times \text{RET}_{\text{est}}) + (0.25 \times \text{SV}_{\text{norm}})$$
-*Threshold: Only concepts with $\text{AVS} \ge 78.0$ proceed to production.*
+
+```math
+AVS = (0.35 \times CTR_{est}) + (0.40 \times RET_{est}) + (0.25 \times SV_{norm})
+```
+
+> **Threshold:** Only concepts with `AVS >= 78.0` proceed to production.
 
 ### 2. Competition-to-Demand Ratio (CDR)
-$$\text{CDR} = \frac{\text{Monthly Search & Browse Impression Velocity}}{\text{Active Competitors in Past 60 Days}}$$
-*Target: $\text{CDR} > 1.5$ indicates a high-probability search cluster.*
+
+```math
+CDR = \frac{\text{Monthly Search and Browse Velocity}}{\text{Active Competitors in Past 60 Days}}
+```
+
+> **Target:** `CDR > 1.5` indicates a high-probability search cluster.
 
 ---
 

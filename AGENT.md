@@ -5,25 +5,31 @@ This document outlines the operational rules, algorithmic scoring models, and ex
 ---
 
 ## 1. Primary Objectives
-1. **Maximize Expected Watch Time:**
-   $$\mathbb{E}[\text{Watch Time}] = P(\text{Click} \mid \text{Thumbnail, Title}) \times \mathbb{E}[\text{Duration} \mid \text{Content}] \times \text{Satisfaction Multiplier}$$
-2. **Zero-Touch Automated Delivery:**
-   Autonomous transition from raw generated clips & audio to rendered 1080p Full HD video, high-CTR thumbnails, reverse-engineered metadata, and headless API upload.
-3. **Loop-Fatigue Elimination:**
-   Never output repetitive static loops. Sequence multi-shot footage with 30–60s macro-cycles and subtle color enhancement.
+
+### Maximize Expected Watch Time:
+```math
+E[\text{Watch Time}] = P(\text{Click} \mid \text{Thumbnail, Title}) \times E[\text{Duration} \mid \text{Content}] \times \text{Satisfaction Multiplier}
+```
+
+* **Zero-Touch Automated Delivery:**
+  Autonomous transition from raw generated clips and audio to rendered 1080p Full HD video, high-CTR thumbnails, reverse-engineered metadata, and headless API upload.
+* **Loop-Fatigue Elimination:**
+  Never output repetitive static loops. Sequence multi-shot footage with 30–60s macro-cycles and subtle color enhancement.
 
 ---
 
 ## 2. Statistical Decision Criteria
 
 ### Algorithmic Viability Score (AVS)
-$$\text{AVS} = (0.35 \times \text{CTR}_{\text{est}}) + (0.40 \times \text{RET}_{\text{est}}) + (0.25 \times \text{SV}_{\text{norm}})$$
+```math
+AVS = (0.35 \times CTR_{est}) + (0.40 \times RET_{est}) + (0.25 \times SV_{norm})
+```
 
-* **$\text{CTR}_{\text{est}}$ (0–100):** Visual contrast, mobile title readability (first 45 characters), curiosity gap.
-* **$\text{RET}_{\text{est}}$ (0–100):** Absence of jarring audio transients, seamless video looping, smooth cross-fades.
-* **$\text{SV}_{\text{norm}}$ (0–100):** Target keyword velocity in YouTube Suggested & Browse features over last 30 days.
+* **`CTR_est` (0–100):** Visual contrast, mobile title readability (first 45 characters), curiosity gap.
+* **`RET_est` (0–100):** Absence of jarring audio transients, seamless video looping, smooth cross-fades.
+* **`SV_norm` (0–100):** Target keyword velocity in YouTube Suggested and Browse features over last 30 days.
 
-*Condition:* If $\text{AVS} < 78.0$, reject topic and request or generate alternative scenario.
+> **Condition:** If `AVS < 78.0`, reject topic and request or generate alternative scenario.
 
 ---
 
@@ -43,4 +49,3 @@ $$\text{AVS} = (0.35 \times \text{CTR}_{\text{est}}) + (0.40 \times \text{RET}_{
 ### Headless Upload Workflow
 * Tool: `porjo/youtubeuploader`
 * Flag: `-cache request.token` for persistent headless execution.
-* Ensure Google Cloud project has YouTube Data API v3 enabled and email added under Test Users.
