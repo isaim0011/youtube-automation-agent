@@ -14,7 +14,8 @@ E[\text{Watch Time}] = P(\text{Click} \mid \text{Thumbnail, Title}) \times E[\te
 * **Zero-Touch Automated Delivery:**
   Autonomous transition from prompt engineering and asset generation to rendered 1080p Full HD video, high-CTR thumbnails, reverse-engineered metadata, and headless API upload.
 * **Multi-Channel Workspace Cleanliness:**
-  Strict isolation across channels (`channels/<Channel>/projects/<ID>/`) to ensure zero clutter, separated API tokens, and persistent project assets.
+* **Interactive Multi-Platform Onboarding:**
+  Always guide the user step-by-step through each social application (YouTube Shorts, TikTok, Instagram Reels, Bilibili) confirming accounts, handles, avatars, and bios are live before initiating video production.
 * **No Raw Edits:**
   Never perform fragile, manual video hacks. Delegate editing to **Diffusion Studio** (`diffusionstudio/editor`) via Model Context Protocol (MCP) or CLI (`dapi`).
 * **Loop-Fatigue Elimination:**

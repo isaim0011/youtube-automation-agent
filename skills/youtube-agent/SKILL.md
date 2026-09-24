@@ -13,14 +13,15 @@ description: >-
 
 ---
 
-## 🗂️ 1. Workspace Organization Protocol (Mandatory First Step)
+## 🗂️ 1. Workspace Organization & Multi-Platform Onboarding Protocol (Mandatory First Step)
 
-To prevent file clutter, track collisions, and project disorganization across single or multiple YouTube channels, the agent must initialize and enforce a structured workspace architecture.
+To prevent brand fragmentation, missing social accounts, and project disorganization across single or multiple YouTube channels, the agent must take the user **step-by-step** through initial setup and **verify that each social platform is configured** before entering video production.
 
-### Workspace Setup Rule:
-1. **Prompt for Workspace Name:** If no dedicated workspace is active, ask the user to name their YouTube workspace (e.g. `youtube-studios` or `my-youtube-network`).
-2. **Channel Directory Isolation:** Under the root workspace, create a dedicated folder for each channel (e.g. `channels/SonderSounds/`, `channels/LoFiDaily/`).
-3. **Project Subfolder Structure:** Inside each channel folder, every video release receives its own isolated project folder with dedicated asset subdirectories.
+### Step-by-Step Social Onboarding Rule:
+1. **Interactive Platform Confirmation:** The agent must walk the user through every social platform one by one (YouTube Shorts, TikTok, Instagram Reels, Bilibili) until each account is confirmed created and configured with the brand handle, PFP, and bio copy.
+2. **Handle Availability Lock:** Never proceed to asset creation or video rendering until handle availability is confirmed across all target platforms.
+3. **Channel Directory Isolation:** Under the root workspace (`<Workspace>/channels/<ChannelName>/`), generate dedicated folders for `branding/` (PFP, banners, social kit), `uploader/` (API tokens), and `projects/` (individual video releases).
+4. **Hold Until Complete:** Do not jump ahead to rendering or video generation until the user confirms all brand channels/social handles are live and ready.
 
 ### Standard Directory Hierarchy:
 ```text

@@ -33,6 +33,7 @@ This repository is built from the ground up as a **universal agent standard**. I
 * **🎵 Broadcast-Grade Audio Concat:** Lossless WAV-to-256kbps AAC audio mastering, loudness normalization, and micro-crossfade transitions.
 * **🖼️ Dual-Variant High-CTR Thumbnails:** Automated generation of both clean photographic immersion (Bilibili/organic) and contrast-badged text graphics (YouTube mobile feed).
 * **⚡ Headless YouTube API Pipeline:** Integration with `porjo/youtubeuploader` utilizing persistent OAuth tokens and structured JSON schema for zero-touch uploads.
+* **🌐 Guided Multi-Platform Social Onboarding:** Built-in agent workflow guiding users step-by-step through setting up and verifying all 4 major platforms (YouTube Shorts, TikTok, Instagram Reels, Bilibili) with synchronized handles, avatars, and bios before entering production.
 * **🗂️ Clean Multi-Channel Isolation:** Enforces clean separation (`channels/<Channel>/projects/<ID>/`) to prevent asset collisions across single or multi-channel networks.
 
 ---
