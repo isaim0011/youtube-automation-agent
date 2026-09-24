@@ -53,9 +53,18 @@ To prevent file clutter, track collisions, and project disorganization across si
 
 ## 🎬 2. Google Flow & Veo Automation Engine (Asset Generation Protocol)
 
-When creating new content from scratch, the agent connects directly to the user's active Google Flow / Veo Automation environment.
+When creating new content from scratch, the agent coordinates directly with the user's Google Flow Studio workspace and companion extension.
 
-### A. Model Selection & Configuration Matrix
+### A. Environment Prerequisites & Companion Installation
+1. **User Login to Google Flow:**
+   * The user must be logged into [flow.google.com](https://flow.google.com/) or [labs.google](https://labs.google/) in their active Chrome profile.
+   * The agent will prompt the user to confirm their login session before generating prompts.
+2. **Companion Extension Installation:**
+   * The official companion extension used for queueing and auto-downloading is:  
+     👉 **[Veo Automation: VEO & Nano Banana Google Flow](https://chromewebstore.google.com/detail/veo-automation-veo-nano-b/lnadnaegfljibehcgclljdefggflfpkn)** *(Extension ID: `lnadnaegfljibehcgclljdefggflfpkn`)*
+   * Official site: `https://veoautomation.com/`
+
+### B. Model Selection & Configuration Matrix
 Before running asset generation, the agent must prompt the user or align on these exact configuration options:
 
 ```
