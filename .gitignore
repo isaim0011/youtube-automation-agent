@@ -1,0 +1,21 @@
+# Sensitive credentials and tokens - DO NOT COMMIT
+client_secrets.json
+request.token
+*.token
+*.key
+*.pem
+
+# Video, audio, and heavy binaries
+*.mp4
+*.wav
+*.m4a
+*.zip
+*.exe
+
+# Cache and build artifacts
+__pycache__/
+*.py[cod]
+.env
+dist/
+build/
+node_modules/
